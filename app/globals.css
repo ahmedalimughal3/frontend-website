@@ -978,11 +978,8 @@ select:focus-visible {
 }
 
 .contact-method-group {
-  display: grid;
+  position: relative;
   min-width: 0;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 10px;
 }
 
 .contact-method {
@@ -1040,9 +1037,13 @@ select:focus-visible {
 }
 
 .contact-copy-button {
+  position: absolute;
+  top: 50%;
+  right: 12px;
   display: grid;
   width: 40px;
   height: 40px;
+  transform: translateY(-50%);
   place-items: center;
   border: 1px solid rgb(255 255 255 / 16%);
   border-radius: 9px;
@@ -1056,6 +1057,10 @@ select:focus-visible {
 .contact-copy-button:hover {
   border-color: rgb(255 255 255 / 28%);
   background: rgb(255 255 255 / 13%);
+}
+
+.contact-method-group .contact-method {
+  padding-right: 60px;
 }
 
 .contact-copy-button:focus-visible {
