@@ -5,11 +5,11 @@ Frontdesk is a responsive product website and sample agency dashboard for a whit
 ## Routes and visitor flow
 
 - `/` is the product landing page. Visitors can explore the product, see how setup works, compare agency and client benefits, review the early-access pricing message, and contact the team.
-- The hero cycles through example conversations for BawdicSoft, Everwell Dental, and Northstar Fitness. Each chat uses its supplied company logo and matching message colors, and slides out to the right as the next company enters from the left. Visitor questions align on the left and assistant answers on the right. The rotation pauses while hovered or focused, and browsers set to reduced motion receive a non-moving preview.
+- The hero cycles through example conversations for BawdicSoft, Everwell Dental, and Northstar Fitness. Each chat uses its supplied company logo and matching message colors, with React-controlled CSS transitions. Visitor questions align on the left and assistant answers on the right. The rotation pauses while hovered or focused, and browsers set to reduced motion receive a non-moving preview.
 - The header and hero link to `/dashboard` for a sample agency-console preview.
 - `/dashboard` shows sample agency metrics, recent leads, client agents, and agent settings. The client selector filters the metrics, chart, leads, client table, and settings together.
 - The early-access section follows the supplied contact-panel reference: email and WhatsApp actions sit on the left, with the headline and introduction on the right. The layout stacks on small screens. The email action can copy the contact address when clipboard access is available.
-- The shared header switches to an accessible, expandable navigation menu on mobile. The footer provides consistent product and contact links on both routes.
+- The shared header switches to an accessible, expandable navigation menu with centered links and an action button on mobile. The footer provides consistent product and contact links on both routes.
 - Landing sections and dashboard cards reflow for smaller screens; client tables remain horizontally scrollable when their columns need extra room.
 
 ## UI and icon references

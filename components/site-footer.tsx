@@ -6,7 +6,9 @@ export default function SiteFooter({ dashboard = false }: { dashboard?: boolean 
       <div className="site-footer-main page-shell">
         <div className="footer-brand-block">
           <Link className="brand" href="/" aria-label="Frontdesk home">
-            <span className="brand-mark">f</span>
+            <span className="brand-mark" aria-hidden="true">
+              f
+            </span>
             <span>frontdesk</span>
           </Link>
           <p>Thoughtful conversations. Better first impressions.</p>

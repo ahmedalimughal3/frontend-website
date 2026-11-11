@@ -18,7 +18,9 @@ export default function SiteHeader({ dashboard = false }: SiteHeaderProps) {
         aria-label="Frontdesk home"
         onClick={() => setMenuOpen(false)}
       >
-        <img className="brand-logo" src="" alt="Frontdesk logo" />
+        <span className="brand-mark" aria-hidden="true">
+          f
+        </span>
         <span>frontdesk</span>
       </Link>
       <button
