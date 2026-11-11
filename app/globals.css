@@ -987,7 +987,9 @@ select:focus-visible {
 
 .contact-method {
   display: flex;
+  min-width: 0;
   min-height: 65px;
+  width: 100%;
   grid-column: 1 / -1;
   align-items: center;
   gap: 12px;
@@ -1018,6 +1020,7 @@ select:focus-visible {
   display: flex;
   flex: 1;
   flex-direction: column;
+  min-width: 0;
 }
 
 .contact-method small {
@@ -1026,6 +1029,7 @@ select:focus-visible {
 }
 
 .contact-method strong {
+  overflow-wrap: anywhere;
   font-size: 11px;
   font-weight: 600;
 }
@@ -1035,7 +1039,7 @@ select:focus-visible {
   font-size: 15px;
 }
 
-.contact-copy {
+.contact-copy-button {
   grid-column: 2;
   justify-self: end;
   border: 0;

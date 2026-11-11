@@ -32,7 +32,11 @@ export default function ContactActions() {
             <ArrowUpRight size={16} strokeWidth={1.7} />
           </span>
         </a>
-        <button className="contact-copy" onClick={copyEmail} type="button">
+        <button
+          className="contact-copy-button"
+          onClick={copyEmail}
+          type="button"
+        >
           {copyState}
         </button>
       </div>
