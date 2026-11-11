@@ -978,8 +978,21 @@ select:focus-visible {
 }
 
 .contact-method-group {
-  position: relative;
+  display: grid;
   min-width: 0;
+  min-height: 65px;
+  grid-template-columns: minmax(0, 1fr) 40px 16px;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgb(255 255 255 / 13%);
+  border-radius: 9px;
+  padding: 9px 12px;
+  background: rgb(255 255 255 / 5%);
+  transition: background 160ms ease;
+}
+
+.contact-method-group:hover {
+  background: rgb(255 255 255 / 10%);
 }
 
 .contact-method {
@@ -1037,13 +1050,9 @@ select:focus-visible {
 }
 
 .contact-copy-button {
-  position: absolute;
-  top: 50%;
-  right: 48px;
   display: grid;
   width: 40px;
   height: 40px;
-  transform: translateY(-50%);
   place-items: center;
   border: 1px solid rgb(255 255 255 / 16%);
   border-radius: 9px;
@@ -1065,17 +1074,18 @@ select:focus-visible {
   pointer-events: auto;
 }
 
-.contact-method-group .contact-arrow {
-  margin-right: 0;
-}
-
 .contact-copy-button:hover {
   border-color: rgb(255 255 255 / 28%);
   background: rgb(255 255 255 / 13%);
 }
 
-.contact-method-group .contact-method {
-  padding-right: 12px;
+.contact-method-group > .contact-method {
+  min-height: unset;
+  width: auto;
+  grid-column: auto;
+  border: 0;
+  padding: 0;
+  background: transparent;
 }
 
 .contact-copy-button:focus-visible {
