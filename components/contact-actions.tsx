@@ -30,6 +30,9 @@ export default function ContactActions() {
             <small>Email us</small>
             <strong>info@bawdicsoft.com</strong>
           </span>
+          <span className="contact-arrow" aria-hidden="true">
+            <ArrowUpRight size={16} strokeWidth={1.7} />
+          </span>
         </a>
         <button
           className="contact-copy-button"

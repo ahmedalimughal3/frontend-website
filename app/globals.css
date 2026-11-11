@@ -1039,7 +1039,7 @@ select:focus-visible {
 .contact-copy-button {
   position: absolute;
   top: 50%;
-  right: 12px;
+  right: 48px;
   display: grid;
   width: 40px;
   height: 40px;
@@ -1051,7 +1051,22 @@ select:focus-visible {
   background: rgb(255 255 255 / 7%);
   color: #d5e9b9;
   cursor: pointer;
-  transition: background 160ms ease, border-color 160ms ease;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease;
+}
+
+.contact-method-group:hover .contact-copy-button,
+.contact-method-group:focus-within .contact-copy-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.contact-method-group .contact-arrow {
+  margin-right: 0;
 }
 
 .contact-copy-button:hover {
@@ -1060,11 +1075,18 @@ select:focus-visible {
 }
 
 .contact-method-group .contact-method {
-  padding-right: 60px;
+  padding-right: 12px;
 }
 
 .contact-copy-button:focus-visible {
   outline-color: #d7ed9f;
+}
+
+@media (hover: none) {
+  .contact-copy-button {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 .site-footer {
