@@ -1,5 +1,5 @@
-# Frontdesk
 
+<<<<<<< HEAD
 Frontdesk is a responsive product website and sample agency dashboard for a white-label AI website assistant. The interface is built with Next.js App Router, React, TypeScript, and CSS; the dashboard uses local demonstration data and does not connect to a backend.
 
 ## Routes and visitor flow
@@ -57,3 +57,5 @@ npm run build
 
 The dashboard is a frontend demonstration. Connect the typed data model in `lib/demo-data.ts` to an authenticated API before using it with real agency or lead data. Add server-side validation, authorization, persistence, and an appropriate privacy policy as part of that integration.
  
+=======
+>>>>>>> 2b82d3ed297a46f34d8ed41f136e11ee9530ac17
