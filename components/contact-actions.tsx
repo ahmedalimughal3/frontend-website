@@ -1,20 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Check, Copy, Mail, MessageCircle } from "lucide-react";
 
 export default function ContactActions() {
-  const [copyState, setCopyState] = useState("Copy email");
+  const [copyState, setCopyState] = useState<"idle" | "copied" | "unavailable">(
+    "idle",
+  );
 
   async function copyEmail() {
     try {
       await navigator.clipboard.writeText("info@bawdicsoft.com");
-      setCopyState("Copied");
+      setCopyState("copied");
     } catch {
-      setCopyState("Copy unavailable");
+      setCopyState("unavailable");
     }
 
-    window.setTimeout(() => setCopyState("Copy email"), 1800);
+    window.setTimeout(() => setCopyState("idle"), 1800);
   }
 
   return (
@@ -35,9 +37,27 @@ export default function ContactActions() {
         <button
           className="contact-copy-button"
           onClick={copyEmail}
+          aria-label={
+            copyState === "copied"
+              ? "Email copied"
+              : copyState === "unavailable"
+                ? "Email could not be copied"
+                : "Copy email address"
+          }
+          title={
+            copyState === "copied"
+              ? "Copied"
+              : copyState === "unavailable"
+                ? "Copy unavailable"
+                : "Copy email"
+          }
           type="button"
         >
-          {copyState}
+          {copyState === "copied" ? (
+            <Check size={17} aria-hidden="true" />
+          ) : (
+            <Copy size={17} aria-hidden="true" />
+          )}
         </button>
       </div>
       <a
