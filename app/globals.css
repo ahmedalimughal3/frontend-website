@@ -1682,11 +1682,11 @@ select:focus-visible {
   }
 
   .header-nav .button-small {
-    min-height: 42px;
-    align-self: center;
+    min-height: 45px;
+     align-self: center;
     justify-content: center;
     margin-top: 5px;
-    padding-inline: 12px;
+    padding-inline: 70px;
     width: max-content;
     font-size: 11px;
   }
@@ -1716,7 +1716,7 @@ select:focus-visible {
   }
 
   .button {
-    min-height: 45px;
+    min-height: 45px; 
     gap: 10px;
     padding-inline: 14px;
     font-size: 11px;
